@@ -11,10 +11,10 @@ public class Juego {
         Jugador p1 = new Jugador();
         Jugador p2 = new Jugador();
         boolean finDeJuego = false;
-        Integer rondasJugadas = 0;    // Número de rondas jugadas
-        Integer exitosJugador1 = p1.exitos;
-        Integer exitosJugador2 = p2.exitos;
-        Integer empates = 0;
+        int rondasJugadas = 0;    // Número de rondas jugadas
+        int exitosJugador1 = p1.exitos;
+        int exitosJugador2 = p2.exitos;
+        int empates = 0;
         String opcionJugador1;
         String opcionJudador2;
         
@@ -52,7 +52,7 @@ public class Juego {
             	exitosJugador2 = ++p2.exitos;
                 System.out.println("Jugador 2 GANA");
             }
-            if (opcionJugador1 == opcionJudador2) {
+            if (opcionJugador1.equals(opcionJudador2)) {
             	empates++;
                 System.out.println("\n\t\t\t Empate \n");
             }
@@ -64,6 +64,6 @@ public class Juego {
             }
             System.out.println();
 
-        } while (finDeJuego != true);
+        } while (!finDeJuego);
     }
 }
